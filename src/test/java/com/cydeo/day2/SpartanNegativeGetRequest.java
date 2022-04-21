@@ -8,6 +8,9 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import static io.restassured.RestAssured.*;
+import static org.junit.jupiter.api.Assertions.*;
+
 public class SpartanNegativeGetRequest {
 
     //beforeall is the same thing with beforeClass in testng
@@ -26,11 +29,10 @@ public class SpartanNegativeGetRequest {
     Then status code must be 406
     And response Content Type must be application/xml;charset=UTF-8;
     */
-        Response response = RestAssured
-                .given().accept(ContentType.XML).when().get("/api/spartans/10");
+        Response response = given().accept(ContentType.XML).when().get("/api/spartans/10");
 
-        Assertions.assertEquals(406, response.statusCode());
-        Assertions.assertEquals("application/xml;charset=UTF-8", response.contentType());
+      assertEquals(406, response.statusCode());
+      assertEquals("application/xml;charset=UTF-8", response.contentType());
 
     }
 }
