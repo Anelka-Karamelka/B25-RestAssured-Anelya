@@ -64,8 +64,8 @@ public class HamcrastMatchersApiTests {
                 .and()
                 .header("Date",notNullValue())
                 .body("teachers[0].firstName",is("Alexander"),
-                        "teachers[0].lastName",is("Syrup"),
-                        "teachers[0].gender",equalTo("male"));
+     "teachers[0].lastName",is("Syrup"),
+                          "teachers[0].gender",equalTo("male"));
 
     }
 

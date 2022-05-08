@@ -39,6 +39,7 @@ public class SpartanTestWithPath extends SpartanTestBase {
         assertEquals(200,response.statusCode());
         assertEquals("application/json",response.contentType());
 
+   // assertEquals(10, response.path("id"));
         //verify each json key has specific value
         System.out.println(response.path("id").toString());
         System.out.println(response.path("name").toString());

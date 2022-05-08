@@ -44,6 +44,8 @@ public class HRApiWithPath extends HrTestBase {
         //assert one by one that they are equal to 2
         for (Integer regionsID : allRegionsIDs) {
             assertEquals(2, regionsID);
+
+            System.out.println(regionsID);
         }
 
     }
